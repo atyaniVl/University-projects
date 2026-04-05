@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+    
+</head>
+<body>
+    <a-scene>
+        <entity environment="preset: goldmine; dressingAmount: 500"></entity>
+    <a-camera>
+        <a-cursor color="red"></a-cursor>
+    </a-camera>
+
+        <a-box position="1 1 -5" color="#79ff9a"
+            animation="property: position; to: 8 1 -10; dur: 2000; easing: linear; loop: true; dir: alternate"
+            animation__2="property: rotation; to: 0 90 180; dur: 2000; easing: linear; loop: true; dir: alternate"
+            animation__color="property: color; to: #ff79de; dur: 500; easing: linear; loop: true; dir: alternate">
+        </a-box>
+
+        <a-entity id="myBox" geometry="primitive: box" position="-1 1 -5" material="color: #380000"
+            animation="property: position; to: -8 1 -10; dur: 2000; easing: linear; loop: true; dir: alternate"
+            animation__2="property: rotation; to: 0 90 180; dur: 2000; easing: linear; loop: true; dir: alternate"
+            animation__color="property: material.color; to: #6d05ff; dur: 500; easing: easeOutSine; loop: true; dir: alternate">
+        </a-entity>
+
+            <a-box color="red" position="0 0 0" rotation="0 360 0"
+                event-set__mouseenter="material.color: blue"
+                event-set__mouseleave="material.color: red"
+                event-set__positioning="_event: click; _target:#changePosition; position:2 1 0"> </a-box>
+
+            <a-box id="changePosition" color="red" position="2 0 0" rotation="0 360 0"
+                event-set__mouseenter="visible:false"
+                event-set__mouseleave="visible:true"> </a-box>
+    </a-scene>
+</body>
+</html>

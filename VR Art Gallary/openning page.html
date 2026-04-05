@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: rgb(255, 255, 255);
+        }
+
+        #content {
+            margin-top: -20%;
+            text-align: center;
+        }
+
+        #myButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        h1 {
+            font-size: 80px;
+        }
+        h2 {
+            font-size: 40px;
+        }
+
+        #instagramLogo, #youtubeLogo {
+            width: 30px;
+            height: 30px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body style="background-image: url('background.png');">
+    <div id="content">
+        <h1>welcome to my portfolio</h1>
+        <h2>check my instagram and youtube to see my work</h2>
+        <h2>or click the btn to see it in VR</h2>
+        <button id="myButton" onclick="loadAnotherPage()">Press Me</button>
+    </div>
+
+    <footer>
+        <a href="https://www.instagram.com/virtual.life.03/" target="_blank" rel="noopener noreferrer">
+            <img id="instagramLogo" src="instagram.png" alt="Instagram Logo">
+        </a>
+        <a href="https://www.youtube.com/channel/UCu-QsaHztYoR9aLfcawGUOQ" target="_blank" rel="noopener noreferrer">
+            <img id="youtubeLogo" src="YouTube.png" alt="YouTube Logo">
+        </a>
+    </footer>
+
+    <script>
+        function loadAnotherPage() {
+            // Specify the path to your another HTML page
+            var newPageUrl = "artGallerySystem.html";
+            // Open the new page in a new tab
+            window.open(newPageUrl, '_blank');
+        }
+    </script></body>
+</html>

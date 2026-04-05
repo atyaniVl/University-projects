@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>a-frame first Lecture</title>
+        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-sky color="#cfecf7"></a-sky>
+            <a-plane color="#191922" position="0 -1 0" rotation="90 0 0" scale="50 50" side="double"></a-plane>
+            <a-box color="#10a1de" width="1" height="3" depth="1" position="0 1.5 0">
+                <a-torus color="#dcc3a7" radius="0.5" position="0 1.5 0" scale="1 1 0.75" rotation="90 0 0"></a-torus>
+                <a-cylinder color="red" width="0.5" height="0.10" scale="1.25 1 1.25"></a-cylinder>
+                <a-cylinder color="green" width="0.5" height="0.10" position="0 -1.5 0" scale="1.5 1 1.5"></a-cylinder>
+            </a-box>
+            <a-cylinder color="green" position="4 1 0" scale="1.5 1 1.5" side="double" open-ended="true" rotation="45 0 0"></a-cylinder>
+            <a-box color="blue" position="-4 1 0" scale="1.5 1 1.5" rotation="45 45 0">
+                <a-sphere color="red" radius="0.25" position="0 2 0"></a-sphere>    
+            </a-box>
+            <a-box color="#23421d" position="0 0 5" scale="2 1.2 1.5">
+                <a-box color="#23421d" position="0.75 -0.20 0" scale="0.5 0.6 1"></a-box>
+                <a-box color="#23421d" position="-0.75 -0.20 0" scale="0.5 0.6 1"></a-box>
+                <a-cylinder color="black" position="0.65 -0.5 0.5" scale="0.2 0.25 0.2" rotation="90 0 0"></a-cylinder>
+                <a-cylinder color="black" position="-0.65 -0.5 0.5" scale="0.2 0.25 0.2" rotation="90 0 0"></a-cylinder>
+                <a-cylinder color="black" position="0.65 -0.5 -0.5" scale="0.2 0.25 0.2" rotation="90 0 0"></a-cylinder>
+                <a-cylinder color="black" position="-0.65 -0.5 -0.5" scale="0.2 0.25 0.2" rotation="90 0 0"></a-cylinder>
+            </a-box>
+        </a-scene>
+    </body>
+</html>

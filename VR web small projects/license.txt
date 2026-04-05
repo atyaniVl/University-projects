@@ -1,0 +1,8 @@
+Model Information:
+* title:	18th century cannon
+* source:	https://sketchfab.com/3d-models/18th-century-cannon-b37b971bc7284d058ef90ddb78d7fd86
+* author:	Sergey Tor (https://sketchfab.com/nanox.petrov)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

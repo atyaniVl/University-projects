@@ -1,0 +1,27 @@
+<!-- <a-asset-item id="ID" src="3d source"></a-asset-item> -->
+
+<!-- <a-entity gltf-model="#gltf"></a-entity> -->
+<!-- <a-entity obj-model="obj: #obj;mtl: #mtl"> -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+        <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <a-asset-item id="room" src="room/room.gltf"></a-asset-item>
+                <a-asset-item id="car" src="low poly car/low poly car.gltf"></a-asset-item>
+                <a-asset-item id="dizzy" src="gekko budies/dizzy W sphere.gltf"></a-asset-item>
+            </a-assets>
+            <a-entity gltf-model="#dizzy"></a-entity>
+
+        </a-scene>
+    </body>
+    </html>
+

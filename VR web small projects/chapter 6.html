@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+
+    <title>Environment Lab</title>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="wood texture" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/wood/crate.gif">
+        </a-assets>
+        <a-sky src="galaxy.jpg"></a-sky>
+        <!-- <a-entity environment="preset: egypt" seed=0 dressing_amount="5"></a-entity> -->
+        <a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_2048.jpg"
+                position="0 2 -5" rotation="45 45 45" >
+            <a-sphere radius="0.25" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/moon_1024.jpg"
+                position="-2 1 0" >
+            </a-sphere>
+        </a-sphere>
+        <a-box src="#wood texture"
+            position=" -3 1.5 -3" scale="0.25 0.25 0.25" rotation="45 45">
+        </a-box>
+        <a-sphere src="#wood texture"
+            position=" 6 1.5 -3"  rotation="45 45" radius="2">
+        </a-sphere>
+        <a-torus segments-tubular="50" src="donut texture.png" position="0 0 -10"
+            scale="5 5 5">
+    </a-torus>
+    </a-scene>
+    
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter4</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+
+</head>
+<body>
+    <a-scene>
+        <a-entity environment="preset: goldmine; dressingAmount: 500"></a-entity>
+        <a-asset>
+            <img id="normalMap" src="snow_01_nor_dx_8k.jpg">
+            <img id="normalMap2" src="decal-normal.jpg">
+            <!-- <audio src="y2mate.com - Detective Conan OST Main Theme Extended" autoplay preload></audio> -->
+        </a-asset>
+
+        <a-camera 
+            position="0 3 0">
+            <a-cursor></a-cursor>
+        </a-camera>
+
+        <!-- <a-light type="ambient" intensity="0.5"></a-light> -->
+        <!-- <a-light type="spot" intensity="10" position="0 1 0" rotation="90 0 0"></a-light> -->
+
+        <a-box 
+            color="lightyellow" 
+            position="2 2 -1"
+            scale="1 1 1"
+            animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 350; startEvents: mouseenter"
+            animation__mouseleave="property: scale; to: 1 1 1; dur: 350; startEvents: mouseleave"
+            >
+        </a-box>
+        <!-- animation__click="property:material.color; to: red; startEvents:click" -->
+        <a-entity
+            id="myBox"
+            geometry="primitive: box"
+            material="color:blue"
+            position="-2 2 -1"
+            scale="1 1 1"
+            animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 350; startEvents: mouseenter"
+            animation__mouseleave="property: scale; to: 1 1 1; dur: 350; startEvents: mouseleave">
+        </a-entity>
+
+        <a-entity
+            id="myBox"
+            geometry="primitive: box" 
+            material="color:white; src:decal-diffuse.png; normal-map:#normalMap2" 
+            position="2 3 -3"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+        </a-entity>
+        <a-entity
+            id="mySphere"
+            geometry="primitive: sphere" 
+            repeat="100 100"
+            radius="0.5"
+            position="0 4 -3"
+            material="color:black; src:decal-diffuse.png; normal-map:#normalMap2" 
+            animation="property: rotation; to: 360 360 360; loop: true; dur: 10000">
+        </a-entity>
+
+        <a-entity
+            id="ground"
+            position="0 0.5 -10"
+            rotation="-90"
+            scale="100 100"
+            repeat="100 100"
+            geometry="primitive: plane"
+            side="double"
+            material="color:white; src:snow_01_diff_8k.jpg; normal-map:#normalMap">
+        </a-entity>
+
+        <a-entity
+            text="value: Hello, A-Frame!; color: #white"
+            position="0 6 -3"
+            scale="5 5 5">
+        </a-entity>
+        <a-entity
+            text="value: I am abdalrahman; color: #red"
+            position="2 6 -3"
+            scale="5 5 5">
+        </a-entity>
+    </a-scene>
+</body>
+</html>

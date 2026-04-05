@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload my models</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <!-- <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script> -->
+</head>
+<body>
+    <a-scene>
+        <a-camera position="0 3 0"></a-camera>
+        <a-sky color="#ffdaba"></a-sky>
+        <!-- <a-plane position="0 0 0" width="100" height="100" color="green" rotation="-90"></a-plane> -->
+        <a-assets>
+            <!-- <a-asset-item id="robot" src="robot.gltf"></a-asset-item> -->
+            <a-asset-item id="c" src="18th_century_cannon/scene.gltf"></a-asset-item>
+            <!-- <a-asset-item id="skull" src="Skull/12140_Skull_v3_L2.obj"></a-asset-item> -->
+            <!-- <a-asset-item id="skullMTL" src="Skull/12140_Skull_v3_L2.mtl"></a-asset-item> -->
+            <!-- <a-asset-item id="chess" src="1.obj"></a-asset-item> -->
+            <!-- <a-asset-item id="chessMTL" src="1.mtl"></a-asset-item>
+            <a-asset-item id="comp" src="computer.obj"></a-asset-item>
+            <a-asset-item id="compMTL" src="computer.mtl"></a-asset-item> -->
+        </a-assets>
+        <a-entity gltf-model="#c" scale="5 5 5"></a-entity>
+        <!-- <a-entity obj-model="obj: #chess;mtl: #chessMTL" position="0 1 0"> -->
+            <!-- <a-entity gltf-model="#robot" position="-3 0 0"></a-entity>
+        </a-entity>
+        <a-entity obj-model="obj: #comp; mtl: #compMTL" position="2 1 0">
+        <a-entity obj-model="obj: #skull; mtl: #skullMTL" position="0 0 0" rotation="-90" scale="0.05 0.05 0.05"> -->
+    </a-scene>
+</body>
+</html>
